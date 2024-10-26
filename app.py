@@ -1,12 +1,15 @@
 import streamlit as st
-from general import show_general
-from pertanyaan1 import show_pertanyaan1
-from pertanyaan2 import show_pertanyaan2
-from pertanyaan3 import show_pertanyaan3
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import sys
+sys.path.append("app")
+sys.path.append("dataset")
+from general import show_general
+from pertanyaan1 import show_pertanyaan1
+from pertanyaan2 import show_pertanyaan2
+from pertanyaan3 import show_pertanyaan3
 
 def show_list_stasiun(df):
     stasiun = st.sidebar.selectbox("Pilih Nama Stasiun", [namaStasiun for namaStasiun in df['station'].unique()])
@@ -22,7 +25,7 @@ def show_list_polutan(df):
     return polutan
 
 
-df = pd.read_csv('cleanMainDataset.csv')
+df = pd.read_csv('./dataset/cleanMainDataset.csv')
 
 st.sidebar.title("Navigation Sidebar")
 page = st.sidebar.selectbox("Pilih Halaman", ["General", "Pertanyaan 1", "Pertanyaan 2", "Pertanyaan 3"])

@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 def show_general(df):
-    
     temp_df1 = df['year'].value_counts().reset_index().sort_values('year')
     temp_df2 = df['wd'].value_counts().reset_index().sort_values('wd')
     explode = [0 for _ in range(16)]
