@@ -22,7 +22,7 @@ def show_list_polutan(df):
     return polutan
 
 
-df = pd.read_csv('dataset\cleanMainDataset.csv')
+df = pd.read_csv('cleanMainDataset.csv')
 
 st.sidebar.title("Navigation Sidebar")
 page = st.sidebar.selectbox("Pilih Halaman", ["General", "Pertanyaan 1", "Pertanyaan 2", "Pertanyaan 3"])
