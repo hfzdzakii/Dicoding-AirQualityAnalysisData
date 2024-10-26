@@ -6,7 +6,7 @@ import seaborn as sns
 
 def show_pertanyaan3(df: pd.DataFrame, namaStasiun: str = 'Changping', tahun: int= 2014, polutan: str= 'PM2.5'):
     st.title("Proyek Analisis Data")
-    st.header("Bagaimana pengaruh arah mata angin dengan polutan di stasiun X pada tahun Y?")
+    st.header(f"Bagaimana pengaruh arah mata angin dengan polutan di stasiun {namaStasiun} pada tahun {tahun}?")
     
     wind_degrees_dict = {
         'N': 0, 'NNE': 22.5, 'NE': 45, 'ENE': 67.5, 'E': 90, 'ESE': 112.5, 'SE': 135, 'SSE': 157.5,

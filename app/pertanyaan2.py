@@ -6,7 +6,7 @@ import seaborn as sns
 
 def show_pertanyaan2(df: pd.DataFrame, namaStasiun: str = 'Changping', tahun: int= 2014):
     st.title("Proyek Analisis Data")
-    st.header("Bagaimama korelasi perubahan temperatur dengan polutan CO?")
+    st.header(f"Bagaimama korelasi perubahan temperatur dengan polutan CO pada Stasiun {namaStasiun} di tahun {tahun}?")
     
     group_df = df.groupby(by=['station','year','month']).agg({
         'CO' : 'mean',
