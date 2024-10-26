@@ -13,8 +13,9 @@ pip install -r requirements.txt
 
 ## Run steamlit app
 ```
-streamlit run dashboard.py
+streamlit run app.py
 ```
 
 Tested on python 3.9
+
 Streamlit Cloud Community link : [Here](https://hqy32wysstacnedhsridhw.streamlit.app)
