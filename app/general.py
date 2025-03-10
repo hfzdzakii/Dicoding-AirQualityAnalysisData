@@ -10,45 +10,44 @@ def show_general(df):
     explode = [0 for _ in range(16)]
     explode[4] = 0.3
     
-    st.title("Proyek Analisis Data")
+    st.title("Data Analysis Project")
     st.header("Exploratory Data Analysis!")
     
-    st.write("Berikut adalah 5 sample data dari Air Quality Dataset")
+    st.write("Below 5 sample data from Air Quality Dataset")
     st.write(df.sample(5))
     st.write("\n" * 20)
     
-    st.write("1. Persebaran Data Nama Stasiun")
+    st.write("1. Data Distribution of Station Name")
     plt.figure(figsize=(15,5))
-    df['station'].value_counts().plot(kind='bar');    # Persebaran data station
-    plt.title('Persebaran Data Nama Stasiun')
-    plt.xlabel('Nama Stasiun')
-    plt.ylabel('Jumlah Data Tercatat')
+    df['station'].value_counts().plot(kind='bar');   
+    plt.title('Data Distribution of Station Name', fontsize=30, pad=20)
+    plt.xlabel('Station Name')
+    plt.ylabel('Number of Recorded Data')
     st.pyplot(plt)
-    st.info("Dari Persebaran Data Nama Stasiun, terlihat lebih jelas \
-        Stasiun Shunyi memiliki jumlah catatan data paling sedikit. \
-        Sedangkan Stasiun Nongzhanguan memiliki jumlah catatan data \
-        paling banyak")
+    st.info("From the Visualization above, it is \
+        clear that Shunyi Station has the least number of data \
+        records. While Nongzhanguan Station has the highest number \
+        of data records.")
     st.write("\n" * 20)
     
-    st.write("2. Persebaran Tahun dicatatnya Data")
+    st.write("2. Data Distribution of the Year Data")
     plt.figure(figsize=(15,5))
     plt.bar(temp_df1['year'], temp_df1['count']) 
     plt.plot(temp_df1['year'], temp_df1['count'], linewidth=2, color='red', marker='o', markersize=5)
-    plt.title('Persebaran Data Tahun Dicatatnya Data')
-    plt.xlabel('Tahun')
-    plt.ylabel('Jumlah Data Tercatat')
+    plt.title('Data Distribution of the Year Data', fontsize=30, pad=20)
+    plt.xlabel('Year')
+    plt.ylabel('Number of Recorded Data')
     st.pyplot(plt)
-    st.info("Dari Visualisasi Persebaran Data Tahun, pencatatan data \
-        mengalami kenaikan dari tahun 2013 hingga 2015. Lalu, \
-        pencatatan data mengalami penurunan pada pada tahun 2016 \
-        dan menurun signifikan pada tahun 2017")
+    st.info("From the Visualization above, data \
+        recording has increased from 2013 to 2015. Then, data recording \
+        stable until 2016 and decreased significantly in 2017.")
     st.write("\n" * 20)
     
     st.write("3. Rasio Arah Datangnya Angin")
     plt.figure(figsize=(5,5))
     plt.pie(temp_df2['count'], labels=temp_df2['wd'], autopct='%1.1f%%', pctdistance=0.8, startangle=90, explode=explode)
-    plt.title('Rasio Arah Datangnya Angin')
+    plt.title('The Ratio of Wind Directions')
     st.pyplot(plt)
-    st.info("Dalam kurun waktu 5 tahun, Angin yang berhembus dari Timur \
-        Laut (North-East) adalah angin yang paling sering berhembus")
+    st.info("In the 5-year period, the wind blowing from the NorthEast \
+        is the most frequent wind.")
     st.write("\n" * 20)

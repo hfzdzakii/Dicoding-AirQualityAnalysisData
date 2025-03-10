@@ -7,40 +7,40 @@ import sys
 sys.path.append("app")
 sys.path.append("dataset")
 from general import show_general
-from pertanyaan1 import show_pertanyaan1
-from pertanyaan2 import show_pertanyaan2
-from pertanyaan3 import show_pertanyaan3
+from analysis1 import show_analysis1
+from analysis2 import show_analysis2
+from analysis3 import show_analysis3
 
-def show_list_stasiun(df):
-    stasiun = st.sidebar.selectbox("Pilih Nama Stasiun", [namaStasiun for namaStasiun in df['station'].unique()])
-    return stasiun
+def show_list_station(df):
+    station = st.sidebar.selectbox("Choose Station Name", [stationName for stationName in df['station'].unique()])
+    return station
     
-def show_list_tahun(df):
-    tahun = st.sidebar.selectbox("Pilih Tahun Data", [tahunnya for tahunnya in df['year'].unique()])
-    return tahun
+def show_list_year(df):
+    year = st.sidebar.selectbox("Choose Year Data", [theYear for theYear in df['year'].unique()])
+    return year
 
-def show_list_polutan(df):
-    polutans = ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3']
-    polutan = st.sidebar.selectbox("Pilih Polutan", [pol for pol in polutans])
-    return polutan
+def show_list_pollutant(df):
+    pollutants = ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3']
+    pollutant = st.sidebar.selectbox("Choose Pollutant", [pol for pol in pollutants])
+    return pollutant
 
 
 df = pd.read_csv('./dataset/cleanMainDataset.csv')
 
 st.sidebar.title("Navigation Sidebar")
-page = st.sidebar.selectbox("Pilih Halaman", ["General", "Pertanyaan 1", "Pertanyaan 2", "Pertanyaan 3"])
+page = st.sidebar.selectbox("Choose Pages", ["General", "Analysis 1", "Analysis 2", "Analysis 3"])
 
-stasiun = show_list_stasiun(df) if page != "General" else None
-tahun = show_list_tahun(df) if page != "General" else None
-polutan = show_list_polutan(df) if page == "Pertanyaan 3" else None
+station = show_list_station(df) if page != "General" else None
+year = show_list_year(df) if page != "General" else None
+pollutant = show_list_pollutant(df) if page == "Analysis 3" else None
 
 # Page content based on selection
 if page == "General":
     show_general(df)
-elif page == "Pertanyaan 1":
-    show_pertanyaan1(df, stasiun, tahun)
-elif page == "Pertanyaan 2":
-    show_pertanyaan2(df, stasiun, tahun)
-elif page == "Pertanyaan 3":
-    show_pertanyaan3(df, stasiun, tahun, polutan)
+elif page == "Analysis 1":
+    show_analysis1(df, station, year)
+elif page == "Analysis 2":
+    show_analysis2(df, station, year)
+elif page == "Analysis 3":
+    show_analysis3(df, station, year, pollutant)
 
