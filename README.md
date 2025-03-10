@@ -31,7 +31,7 @@ Tested on python 3.12.9
 
 ## Or, You Can See the Deployed Project Here
 
-Streamlit Cloud Community link : [Here](https://hqy32wysstacnedhsridhw.streamlit.app)
+Streamlit Cloud Community link : [Here](https://dicoding-dataanalysisproject-ga7suelumbbcjtkmymikeq.streamlit.app/)
 
 Feel free to wake up the project if it deactivated automatically due to inactivity
 
