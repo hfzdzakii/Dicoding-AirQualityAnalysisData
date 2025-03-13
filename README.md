@@ -17,8 +17,8 @@ Dataset that used in this project can be found [here](https://github.com/marcelo
 ```
 $ conda create --name main-ds python=3.12.9
 $ conda activate main-ds
-$ git clone https://github.com/hfzdzakii/Dicoding-DataAnalysisProject.git
-$ cd Dicoding-DataAnalysisProject
+$ git clone https://github.com/hfzdzakii/Dicoding-StreamlitAnalysisData.git
+$ cd Dicoding-StreamlitAnalysisData
 $ pip install -r requirements.txt
 ```
 
@@ -33,7 +33,7 @@ Tested on python 3.12.9
 
 Streamlit Cloud Community link : [Here](https://dicoding-dataanalysisproject-ga7suelumbbcjtkmymikeq.streamlit.app/)
 
-Feel free to wake up the project if it deactivated automatically due to inactivity
+Feel free to wake up the project if it deactivated automatically due to inactivity.
 
 ## Or, You Can Pull The Docker Image
 ```
@@ -43,4 +43,4 @@ $ docker run --name streamlit-app -p 8501:8501 hfzdzakii/streamlit-analysis-data
 
 Type `http://localhost:8501` in your browser to open Streamlit App
 
-To stop Streamlit server, type `Ctr + C` or `Command + C` in the terminal
+To stop Streamlit server, type `Ctrl + C` or `Command + C` in the terminal
