@@ -1,13 +1,13 @@
 # Dicoding Final Project - Data Analysis Project
 
-- Created by : Muhammad Hafizh (hfzdzakii) Dzaki
+- Created by : Muhammad Hafizh Dzaki
 - Last Edited On : March 2025
 
-This project was created to fulfill the completion of the **Learning Data Analysis with Python** course in the **Data Scientist** learning path on [Dicoding](https://www.dicoding.com).
+This project was created to fulfill the completion of the **Data Analysis with Python** course in the **Data Scientist** learning path on [Dicoding](https://www.dicoding.com).
 
 **Data Scientist** learning path can be found [here](https://www.dicoding.com/learningpaths/60)
 
-**Learning Data Analysis with Python** course can be found [here](https://www.dicoding.com/academies/555-belajar-analisis-data-dengan-python)
+**Data Analysis with Python** course can be found [here](https://www.dicoding.com/academies/555-belajar-analisis-data-dengan-python)
 
 Dataset that used in this project can be found [here](https://github.com/marceloreis/HTI/tree/master)
 
