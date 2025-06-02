@@ -43,9 +43,9 @@ def show_general(df):
         stable until 2016 and decreased significantly in 2017.")
     st.write("\n" * 20)
     
-    st.write("3. Rasio Arah Datangnya Angin")
+    st.write("3. Wind Direction Ratio")
     plt.figure(figsize=(5,5))
-    plt.pie(temp_df2['count'], labels=temp_df2['wd'], autopct='%1.1f%%', pctdistance=0.8, startangle=90, explode=explode)
+    plt.pie(temp_df2['count'], labels=temp_df2['wd'], autopct='%1.1f%%', wedgeprops={'width': 0.4}, pctdistance=0.8, startangle=90, explode=explode)
     plt.title('The Ratio of Wind Directions')
     st.pyplot(plt)
     st.info("In the 5-year period, the wind blowing from the NorthEast \

@@ -1,15 +1,15 @@
-# Dicoding Final Project - Data Analysis Project
+# Dicoding Final Project - Air Quality Analysis Project
 
 - Created by : Muhammad Hafizh Dzaki
-- Last Edited On : March 2025
+- Last Edited On : June 2025
 
-This project was created to fulfill the completion of the **Data Analysis with Python** course in the **Data Scientist** learning path on [Dicoding](https://www.dicoding.com).
+This project was created to fulfill the completion of the **Data Analysis with Python** course in the **Data Scientist** learning path at [Dicoding](https://www.dicoding.com).
 
 **Data Scientist** learning path can be found [here](https://www.dicoding.com/learningpaths/60)
 
 **Data Analysis with Python** course can be found [here](https://www.dicoding.com/academies/555-belajar-analisis-data-dengan-python)
 
-Dataset that used in this project can be found [here](https://github.com/marceloreis/HTI/tree/master)
+**Dataset that used in this project** can be found [here](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data)
 
 ## How to Run the Project
 
@@ -17,8 +17,8 @@ Dataset that used in this project can be found [here](https://github.com/marcelo
 ```
 $ conda create --name main-ds python=3.12.9
 $ conda activate main-ds
-$ git clone https://github.com/hfzdzakii/Dicoding-StreamlitAnalysisData.git
-$ cd Dicoding-StreamlitAnalysisData
+$ git clone https://github.com/hfzdzakii/Dicoding-AirQualityAnalysisData.git
+$ cd Dicoding-AirQualityAnalysisData
 $ pip install -r requirements.txt
 ```
 
@@ -34,13 +34,3 @@ Tested on python 3.12.9
 Streamlit Cloud Community link : [Here](https://dicoding-dataanalysisproject-ga7suelumbbcjtkmymikeq.streamlit.app/)
 
 Feel free to wake up the project if it deactivated automatically due to inactivity.
-
-## Or, You Can Pull The Docker Image
-```
-$ docker pull hfzdzakii/streamlit-analysis-data:latest
-$ docker run --name streamlit-app -p 8501:8501 hfzdzakii/streamlit-analysis-data:latest
-```
-
-Type `http://localhost:8501` in your browser to open Streamlit App
-
-To stop Streamlit server, type `Ctrl + C` or `Command + C` in the terminal

@@ -36,7 +36,10 @@ def show_analysis2(df: pd.DataFrame, stationName: str = 'Changping', year: int= 
     ax2.plot(res_df.index.map(monthEncoder), res_df['TEMP'], color='r', marker='s', label='Temperatur')
     ax2.tick_params(axis='y', labelcolor='r')
     ax1.set_xlabel('Month')
+    lines_1, labels_1 = ax1.get_legend_handles_labels()
+    lines_2, labels_2 = ax2.get_legend_handles_labels()
     plt.title(f'Dual Axes Line Plot for CO Pollutant and Air Temperature \n at Station {stationName} in the Year {year}', fontsize=20, pad=20)
+    ax1.legend(lines_1 + lines_2, labels_1 + labels_2, loc='upper left')
     fig.tight_layout()
     st.pyplot(plt)
     st.info(f"It can be seen from the visualization, at Station {stationName} during the \
