@@ -11,6 +11,8 @@ This project was created to fulfill the completion of the **Data Analysis with P
 
 **Dataset that used in this project** can be found [here](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data)
 
+**Slide presentation for analysis** can be found [here](https://drive.google.com/file/d/1-8S-oPPBu5ms14cDCHfx7fqe1caP_Zfs/view?usp=sharing)
+
 ## How to Run the Project
 
 ### Setup Environment - Anaconda / Miniconda
