@@ -6,9 +6,6 @@ import seaborn as sns
 
 def show_general(df):
     temp_df1 = df['year'].value_counts().reset_index().sort_values('year')
-    temp_df2 = df['wd'].value_counts().reset_index().sort_values('wd')
-    explode = [0 for _ in range(16)]
-    explode[4] = 0.3
     
     st.title("Data Analysis Project")
     st.header("Exploratory Data Analysis!")
@@ -45,8 +42,10 @@ def show_general(df):
     
     st.write("3. Wind Direction Ratio")
     plt.figure(figsize=(5,5))
-    plt.pie(temp_df2['count'], labels=temp_df2['wd'], autopct='%1.1f%%', wedgeprops={'width': 0.4}, pctdistance=0.8, startangle=90, explode=explode)
-    plt.title('The Ratio of Wind Directions')
+    df['wd'].value_counts().plot(kind='bar')
+    plt.title('The Distribution of Wind Directions')
+    plt.ylabel('Number of Recorded Data')
+    plt.xlabel('Wind Direction')
     st.pyplot(plt)
     st.info("In the 5-year period, the wind blowing from the NorthEast \
         is the most frequent wind.")
