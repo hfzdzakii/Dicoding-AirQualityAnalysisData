@@ -1,7 +1,7 @@
 # Dicoding Final Project - Air Quality Analysis Project
 
 - Created by : Muhammad Hafizh Dzaki
-- Last Edited On : June 2025
+- Last Edited On : August 2025
 
 This project was created to fulfill the completion of the **Data Analysis with Python** course in the **Data Scientist** learning path at [Dicoding](https://www.dicoding.com).
 
